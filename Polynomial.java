@@ -9,13 +9,9 @@ public class Polynomial {
             polyArr = new double[inArr.length];
             polyArr = inArr.clone();
         }
-        
-        public double [] getPolynomial() {
-            return polyArr;
-        }
     
         public Polynomial add(Polynomial toAdd) {
-            double [] addArr = toAdd.getPolynomial().clone();
+            double [] addArr = toAdd.polyArr.clone();
             double [] polyArrCopy = polyArr.clone();
             if (addArr.length > polyArrCopy.length){
                 for (int i = 0; i < polyArrCopy.length; i++) {
